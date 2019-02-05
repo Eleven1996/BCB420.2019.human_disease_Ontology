@@ -288,7 +288,7 @@ for (index in 1:nrow(NEWdf)){
 HDOsys<-usefuldata
 save(HDOsys,file = file.path("inst","extdata","HDOsys.RData"))
 # can be loaded with
-load("./inst/extdata/HDOsys.RData")
+load(file = file.path("inst", "extdata", "HDOsys.RData"))
 ```
 
 # 5 Annotating 
