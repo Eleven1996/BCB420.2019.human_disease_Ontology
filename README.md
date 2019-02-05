@@ -291,7 +291,7 @@ save(HDOsys,file = file.path("inst","extdata","HDOsys.RData"))
 load("./inst/extdata/HDOsys.RData")
 ```
 
-#5 Annotating 
+# 5 Annotating 
 Our database is basicly a DAG object, each node is a disease, each node has a unique DOID number, and it has a "is_a" realationship with their parents.
 first we want to know how many nodes are there in the databse.<br/>
 From the result of readOboFile we know that there are total 11514 node, and among these, only 3389(29.7%) of them have OMIM id.<br/>
@@ -317,7 +317,7 @@ numeric(0)
 Most of them start with PS,I searched but didn't find any formal explaination about this,since I do not know what happened here,I think it will be better just leave it as it is.(I don't want to remove the prefix "PS" then do the mapping, since PS605389 may not mean 605389, and the result will be incorrect)<br/>
 So,only 3 out of 11514 (0.03%) are successfully mapped to HGNC symbol, which is a very low rate, however, give consideration of the nature of my database, which is just disease name, it make sense. This result is saying only very small proportion(0.03%) of diseases can be directly linked to single gene/protein, most of the disease are a result of combination influences of many genes. <br/>
 
-#6 Annotation of the example gene set
+# 6 Annotation of the example gene set
 Sadly, none of the element in the test gene set was able to mapped to our DOID, we cannot perform any kind of annotation around it.
 ```R
 xSet <- c("AMBRA1", "ATG14", "ATP2A1", "ATP2A2", "ATP2A3", "BECN1", "BECN2",
@@ -335,14 +335,14 @@ xSet <- c("AMBRA1", "ATG14", "ATP2A1", "ATP2A2", "ATP2A3", "BECN1", "BECN2",
           "VPS41", "VTI1B", "YKT6")
 any(xSet%in% usefuldata$HGNC) #FALSE
 ```
-#7 Reference and citation
+# 7 Reference and citation
 * course website
 * example STRING Package:https://github.com/hyginn/BCB420.2019.STRING
 * parse function by ed-lau [https://github.com/Molecular-Proteomics/roboparse/blob/master/main.R]
 * Lynn M Schriml,Elvira Mitraka, James Munro, Becky Tauber etc. Human Disease Ontology 2018 update: classification, content and workflow expansion, Nucleic Aicds Reaseach,Volumn 47,Issue D1,8 Jan 2019,pages D955-d962[https://academic.oup.com/nar/article/47/D1/D955/5165342]
 
-
-#8 Acknowlegments
+ 
+# 8 Acknowlegments
 Thanks to my classmates who answered my questions when I am confusing.<br/>
 Thanks ed-lau for whoever you are, you saved me a lot of time.
 
