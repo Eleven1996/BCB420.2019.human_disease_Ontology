@@ -42,13 +42,13 @@ structure:
       |__rptTwee.R
    |__inst/
       |__extdata/
-         |__HDOsys.RData #result of mapping
+         |__HDOsys.RData
       |__scripts/
          |__scriptTemplate.R
    |__LICENSE
-   |__man/
    |__NAMESPACE
    |__R/
+      |__toBrowser.R
       |__zzz.R
    |__README.md
 ```
